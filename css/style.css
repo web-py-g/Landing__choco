@@ -118,6 +118,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: url(../img/welcome.jpg) center no-repeat;
+    background-size: cover;
 }
 .welcome .wrapper{
 	position: absolute;
@@ -152,15 +153,16 @@ body{
 	margin-left:  50%;
 	transform: translateX(-50%);
 	overflow: hidden;
-	width: 406px;
+	width: 360px;
 }
 .welcome__button{
-	font-size: 28px;
+	width: 100%;
+	font-size: 22px;
 	display: inline-block;
 	background-color: rgb(118, 84, 71);
 	color: rgb(255, 255, 255);
 	border-radius: 10px;
-	padding: 30px 50px;
+	padding: 30px 40px;
 }
 .welcome__button:before{
 	top: 0;
@@ -169,6 +171,7 @@ body{
 	position: absolute;
 	height: 100%;
 	width: 1.5em;
+	overflow: hidden;
 	background-color: rgba(255,255,255,0.6);
 	transform: translateX(-4em)  skewX(-45deg);
 	animation: move__light 4s linear infinite;
@@ -177,12 +180,17 @@ body{
 @keyframes move__light{
 	0%{
 		transform: translateX(0em)  skewX(-45deg);
+		opacity: 1;
 	}
 	20%{
-		transform: translateX(20em)  skewX(-45deg);
+		transform: translateX(18em)  skewX(-45deg);
+	}
+	35%{
+		opacity: 0;
 	}
 	100%{
-		transform: translateX(20em)  skewX(-45deg);
+		transform: translateX(18em)  skewX(-45deg);
+		opacity: 0;
 	}
 }
 .welcome__button:hover:before{
